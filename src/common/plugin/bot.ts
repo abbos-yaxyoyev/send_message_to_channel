@@ -33,8 +33,8 @@ async function startBot(instance) {
 
     try {
         await instance.register(require('middie'))
-        // await instance.use(bot.webhookCallback(`/${ENV.TELEGRAF_TOKEN}`))
-        // await bot.telegram.setWebhook(`${ENV.WEB_HOOK_URL}/${ENV.TELEGRAF_TOKEN}`)
+        await instance.use(bot.webhookCallback(`/${ENV.TELEGRAF_TOKEN}`))
+        await bot.telegram.setWebhook(`${ENV.WEB_HOOK_URL}/${ENV.TELEGRAF_TOKEN}`)
 
         await bot.launch()
     }

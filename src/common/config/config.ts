@@ -11,8 +11,8 @@ console.log("DB_REPLICA_SET: ", DB_REPLICA_SET);
 
 export const ENV = {
   DB_URL: process.env.DB_URL || `mongodb://localhost:27027/Bot?replicaSet=${DB_REPLICA_SET}`,
-  TELEGRAF_TOKEN: "5350985690:AAEqW54MDoghqgCmkcpGPD3PlguN71zKc28",
-  WEB_HOOK_URL: "http://localhost:4000",
+  TELEGRAF_TOKEN: process.env.TELEGRAF_TOKEN || "5350985690:AAEqW54MDoghqgCmkcpGPD3PlguN71zKc28",
+  WEB_HOOK_URL: process.env.WEB_HOOK_URL || "http://abbos.dinamic.uz",
   HOST: process.env.HOST || '0.0.0.0',
   BOT: 4000,
 };

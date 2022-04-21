@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.replyButtonService = void 0;
+const telegraf_1 = require("telegraf"); // Module to use Telegraf API.
+//! keybord
+async function replyButtonService(ctx, message, keyboards = [], options = null) {
+    await ctx.reply(message, telegraf_1.Markup.keyboard(keyboards)
+        .oneTime()
+        .resize(), {
+        parse_mode: 'markdown',
+        ...options
+    });
+}
+exports.replyButtonService = replyButtonService;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoia2V5Ym9yZC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9jb21tb24vc2VydmljZS9yZXBseS9rZXlib3JkLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLHVDQUFrQyxDQUFDLDhCQUE4QjtBQUVqRSxXQUFXO0FBQ0osS0FBSyxVQUFVLGtCQUFrQixDQUFDLEdBQUcsRUFBRSxPQUFlLEVBQUUsU0FBUyxHQUFHLEVBQUUsRUFBRSxVQUFlLElBQUk7SUFDOUYsTUFBTSxHQUFHLENBQUMsS0FBSyxDQUNYLE9BQU8sRUFDUCxpQkFBTSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUM7U0FDckIsT0FBTyxFQUFFO1NBQ1QsTUFBTSxFQUFFLEVBQ2I7UUFDSSxVQUFVLEVBQUUsVUFBVTtRQUN0QixHQUFHLE9BQU87S0FDYixDQUNKLENBQUE7QUFDTCxDQUFDO0FBWEQsZ0RBV0MiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBNYXJrdXAgfSBmcm9tICd0ZWxlZ3JhZic7IC8vIE1vZHVsZSB0byB1c2UgVGVsZWdyYWYgQVBJLlxyXG5cclxuLy8hIGtleWJvcmRcclxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHJlcGx5QnV0dG9uU2VydmljZShjdHgsIG1lc3NhZ2U6IHN0cmluZywga2V5Ym9hcmRzID0gW10sIG9wdGlvbnM6IGFueSA9IG51bGwpIHtcclxuICAgIGF3YWl0IGN0eC5yZXBseShcclxuICAgICAgICBtZXNzYWdlLFxyXG4gICAgICAgIE1hcmt1cC5rZXlib2FyZChrZXlib2FyZHMpXHJcbiAgICAgICAgICAgIC5vbmVUaW1lKClcclxuICAgICAgICAgICAgLnJlc2l6ZSgpLFxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgcGFyc2VfbW9kZTogJ21hcmtkb3duJyxcclxuICAgICAgICAgICAgLi4ub3B0aW9uc1xyXG4gICAgICAgIH1cclxuICAgIClcclxufVxyXG5cclxuIl19
