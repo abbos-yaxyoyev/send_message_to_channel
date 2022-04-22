@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build": "tsc",
-    "deploy": "scp -r dist package.json root@135.181.193.100:/root/Apps/Bookuz",
+    "deploy": "scp -i BOT.pem -r dist package.json .env ubuntu@3.249.217.178:/sendMessageBot",
     "start-paysys": "node ./dist/paysys/server.js",
     "dev-bot": "nodemon --exec ts-node -- --files ./src/tgBot/server.ts",
     "dev": "concurrently --kill-others \"yarn run dev\"",
